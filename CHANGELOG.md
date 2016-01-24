@@ -1,3 +1,40 @@
+## Version [2.9.0](https://github.com/jscs-dev/node-jscs/compare/v2.8.0...v2.9.0) (2015-01-23):
+
+> Changed the changelog date format to be YYYY-MM-DD.
+
+Whoo a blizzard release! Hopefully, this will be our last release before we start pushing out pre-release versions of 3.0. (If necessary, we can push bug fixes to 2.x)
+
+The plan:
+
+- Push the `2.9.0` release
+- Create a `2.x` branch off of `master`
+- Switch `master` to be the `3.0` branch
+- Merge in 2.x changes + cleanup stuff for a 3.0 alpha release.
+- Do what we can in our [3.0 milestone](https://github.com/jscs-dev/node-jscs/issues/1854). We would really appreciate any help!
+  - Especially for deprecating rules/options, rule merging, renames/inconsistencies that we don't catch.
+
+### Rule Updates
+
+- [`validateNewlineAfterArrayElements`](http://jscs.info/rule/validateNewlineAfterArrayElements): add autofix support for this rule (Joeri de Gooijer)
+- [`requireSemicolons`](http://jscs.info/rule/requireSemicolons): account for stage-2 `ClassProperty` (Henry Zhu)
+
+
+### Presets
+
+- `airbnb`: Enforce rule [25.1](https://github.com/airbnb/javascript/blob/c25dbac620b258c4421251bc403fffa1051de61e/README.md#25.1) (Joe Bartlett)
+	- This adds `requireDollarBeforejQueryAssignment`
+- `airbnb`: Enforce rule [7.11](https://github.com/airbnb/javascript/blob/c25dbac620b258c4421251bc403fffa1051de61e/README.md#7.11) (Joe Bartlett)
+	- This fixes up function spacing issues (autofixable)
+
+### Bug Fixes
+
+- [`requireEnhancedObjectLiterals`](http://jscs.info/rule/requireEnhancedObjectLiterals): Don't error for computed properties (Henry Zhu)
+- [`requireTemplateStrings`](http://jscs.info/rule/requireTemplateStrings): should not report string to binary (Oleg Gaidarenko)
+- [`requireVarDeclFirst`](http://jscs.info/rule/requireVarDeclFirst): be aware of the comments (Kushan Joshi)
+
+### Misc
+- `OVERVIEW.md`: add the [Visual Studio Code extension](https://marketplace.visualstudio.com/items/ms-vscode.jscs) to list of "Friendly Packages" (Tyler Hughes)
+
 ## Version [2.8.0](https://github.com/jscs-dev/node-jscs/compare/v2.7.0...v2.8.0)
 
 Happy new year! Small changes this time, small, but important fixes which still warrants the minor bump.
